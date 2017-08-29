@@ -25,6 +25,8 @@ SidRothPlayer.prototype.handle = function () {
             this.play(podcastURL, 0);
         } else if (intent.name === "AMAZON.PauseIntent") {
             this.stop();
+        } else if (intent.name === "AMAZON.StopIntent") {
+            this.stop();
         } else if (intent.name === "AMAZON.ResumeIntent") {
             var lastPlayed = this.loadLastPlayed(userId);
             var offsetInMilliseconds = 0;
